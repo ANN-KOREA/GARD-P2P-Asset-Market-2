@@ -29,3 +29,20 @@ input[type=text],input[type=email],input[type=number],input[type=search],input[t
 .owner-email-setup code{font-family:ui-monospace,monospace}
 #owner-email-setup{scroll-margin-top:115px}
 @media(max-width:640px){.owner-email-setup{padding:18px}.quick-email-fields{display:block}.quick-email-fields .field{min-width:0}.quick-email-fields button{width:100%;margin-top:10px}}
+
+/* v1.3 publication safety: visible prerequisites, avoid empty catalog overwrite */
+.guidance{color:#7a480a!important;font-weight:720;line-height:1.55}
+.publish-readiness{margin:12px 0 0;border-left:4px solid #8cbdb2;background:#eef8f6;padding:12px 14px;border-radius:4px;color:#225852;font-size:.86rem;font-weight:670}
+#quick-publication-guidance{margin-top:8px!important}
+
+/* v1.4: display the configured public contact email, not just a hidden mailto href. */
+.publisher-contact{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding:18px 20px;border:1px solid #a7cfc9;background:#e9f5f2;border-radius:13px;margin:4px 0 18px}
+.publisher-contact[hidden]{display:none!important}
+.publisher-contact strong{display:block;color:#134e50;margin-bottom:3px;font-size:1rem}
+.publisher-contact p{margin:5px 0 0;color:#476b6e;font-size:.8rem}
+.publisher-contact.missing{background:#fff7eb;border-color:#f0d7ab}
+.email-address{color:#075b58;text-decoration:underline;text-underline-offset:3px;font-weight:750;overflow-wrap:anywhere;word-break:break-word}
+.card-contact{border-top:1px solid var(--line);padding-top:10px;display:flex;flex-direction:column;align-items:flex-start;gap:4px;font-size:.84rem;min-width:0}
+.card-contact>span{font-size:.74rem;font-weight:750;color:var(--sub)}
+.email-unavailable{color:#a12731;font-weight:700;font-size:.82rem}
+@media(max-width:640px){.publisher-contact{padding:14px 16px}.publisher-contact .btn{width:100%}}
