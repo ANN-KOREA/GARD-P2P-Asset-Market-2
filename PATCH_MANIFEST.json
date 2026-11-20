@@ -1,0 +1,28 @@
+{
+  "release": "GARD-3Products-Additive-v1.0",
+  "date": "2026-11-20",
+  "base_repo": "ANN-KOREA/GARD-P2P-Asset-Market-2",
+  "mode": "additive",
+  "preserves": [
+    "catalog.json",
+    "js/db.js",
+    "js/owner.js",
+    "existing IndexedDB"
+  ],
+  "files": {
+    "styles-products.css": "3dc504526aa77aa766fce2fef28d9370e4a906dd7d55f60461f96ba26419ceae",
+    "products.html": "b80ffbca67190a7606517c6ca92ba36ff452839a851d7f4e545bb0cdb995f42a",
+    "product-review.html": "4b38f756a07ce21a90228edc842db7eeb7958f15fbebaea41a23ffa47e2d1648",
+    "product-studio.html": "9d602399eb7b776160b6d9f74b7ecf3a36d59ceac5f07b49000d7fa099363b6a",
+    "apply_update.py": "bffe1fccd239ec69ce78545d3cb120d38ed3cee5ff227e28b7301ff3c91c24ac",
+    "README_UPDATE_KO.md": "bfb049b9e45e2782bf65822d32026a178725f511ff17606ce9283102749d5951",
+    "docs/PRODUCT_ACCEPTANCE_QA_KO.md": "8645faa8f37b9c13ae18688c55fb1dad520a9c0bd698bb2257a04cc9581e2a19",
+    "tests/test-product-core.mjs": "2a6c23880760a404f58830712c00eb939716549c90e5b8d8951b88a6ff3d9bba",
+    "js/gard-product-core.mjs": "bec4407896bda3c53e431789c2c1cf1ac1b3c72fbbc33192f538aac72f5659c8",
+    "js/gard-product-db.mjs": "8221802fb83858cf6bdcb26fe7afc6e95107d40ccf59a3a9f762cb347384c7f7",
+    "js/gard-product-review.mjs": "05f6274922bcdc067c284f35d61e632af0b538b7cc1d885d19883e4f9ff36114",
+    "js/gard-product-studio.mjs": "ec8fd502d6091bb526155e76c184e8f675afe70c83849579eed8e604bfbe305d",
+    "js/gard-product-catalog.mjs": "b18af1d017b114776597336b765b10c5484ca8bad50ff91ce7fb0820cf3b5b28",
+    "examples/README_EXAMPLES.md": "6f12cb43256c1c3324aeb9783855a630a9692937be644d485e87d926a65820db"
+  }
+}

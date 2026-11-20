@@ -1,0 +1,7 @@
+import {SKU,money,escapeHTML} from './gard-product-core.mjs';
+const cards=document.getElementById('product-cards');let contact='';
+const core={KIT49:['개인의 기록·분류·백업·복구','개인 로컬 제작도구 · 증거 상태 · 권리 양식'],WS300:['교육 후 고객 자신의 제작능력 확보','2회 워크숍 · 참여자별 실습 · 독립 재현'],POC500:['30일 도입 가능성·실패조건 검증','시험계획 · 오류기록 · PASS/FAIL/NOT_RUN 판정']};
+function makeLink(p){const subject=encodeURIComponent(`[GARD][${p.code}] ${p.ko} 상담`);const body=encodeURIComponent('GARD 상품 구매 상담을 요청합니다.\n\n상품: '+p.ko+'\n구매자 유형:\n활용 목적:\n데이터·권리 제한사항:\n희망 범위:\n\n표시 가격은 제안가이며 부가세와 세부 범위는 견적서로 확인하겠습니다.');return `mailto:${encodeURIComponent(contact)}?subject=${subject}&body=${body}`;}
+function render(){cards.innerHTML=Object.values(SKU).map(p=>`<article class="gp-panel gp-card"><span class="gp-tag">${p.code}</span><h2>${escapeHTML(p.name)}</h2><strong class="gp-price">${money(p.price)}</strong><p>${escapeHTML(core[p.code][0])}</p><p class="sub gp-txt-xs">기본 납품: ${escapeHTML(core[p.code][1])}</p><div class="gp-actions">${contact?`<a class="gp-btn" href="${escapeHTML(makeLink(p))}">이메일 견적 문의</a>`:'<span class="gp-status">문의 이메일 미설정</span>'}</div></article>`).join('');}
+async function init(){try{const r=await fetch('./catalog.json',{cache:'no-store'});if(r.ok){const d=await r.json();const email=String(d.publisher?.email||'').trim();if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))contact=email;}}catch{}render();document.getElementById('contact-note').textContent=contact?'공식 공개 카탈로그에 설정된 이메일로 구매 상담 문구를 작성합니다. 실제 발송·결제·계약은 자동 수행하지 않습니다.':'공식 공개 카탈로그에서 유효한 문의 이메일을 찾지 못했습니다. 기존 전시장에 있는 문의 절차를 이용해 주세요.';}
+init();
